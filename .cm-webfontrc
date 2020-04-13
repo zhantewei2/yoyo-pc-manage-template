@@ -1,0 +1,7 @@
+{
+  "outputDir":"public/css",
+  "imgDir":"cm-webfont/resources",
+  "fontName":"ztwx",
+  "fontClassName":"za",
+  "formats":["woff","woff2"]
+}

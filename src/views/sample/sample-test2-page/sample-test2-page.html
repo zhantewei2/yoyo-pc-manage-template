@@ -1,0 +1,51 @@
+<main>
+    <nav class="cm-search-card">
+         <Row>
+            <Cell><Label>经销商售后代码</Label><Value><el-input></el-input></Value></Cell>
+            <Cell><Label>销售组织</Label><Value><el-input></el-input></Value></Cell>
+            <Cell><Label>销售组</Label><Value><el-input></el-input></Value></Cell>
+        </Row>
+        <Row>
+            <Cell>
+                <Label>xx</Label>
+                <Value>
+                    <el-select v-model="value1" placeholder="请选择">
+                        <el-option
+                          v-for="item in options"
+                          :key="item.value"
+                          :label="item.label"
+                          :value="item.value">
+                        </el-option>
+                    </el-select>
+                </Value>
+            </Cell>
+            <Cell>
+                <Label>xx</Label>
+                <Value>
+                     <el-date-picker
+                      v-model="data1"
+                      type="date"
+                      placeholder="选择日期">
+                    </el-date-picker>
+                </Value>
+            </Cell>
+            <Cell><Label>xx</Label><Value><el-input></el-input></Value></Cell>
+        </Row>
+        <Row>
+            <Cell>
+                <Label>label</Label>
+                <Value><el-input></el-input></Value>
+            </Cell>
+            <Cell p="2">
+                <Label>时间区间</Label>
+                <el-date-picker
+                  v-model="data2"
+                  type="daterange"
+                  range-separator="至"
+                  start-placeholder="开始日期"
+                  end-placeholder="结束日期">
+                </el-date-picker>
+            </Cell>
+        </Row>
+    </nav>
+</main>

@@ -1,0 +1,108 @@
+
+.core-nav-top {
+  .img-area {
+    height: 5.5rem;
+    @include center();
+
+    img {
+      height: 4rem;
+    }
+  }
+
+  .content {
+    padding: 1rem 0;
+    text-align: center;
+    font-weight:bold;
+    color:rgba($--color-brand,.3);
+    font-size: 1.4rem;
+  }
+
+  box-shadow: $--shadow-exhibition-card;
+}
+.core-header-avatar{
+  height:2.7rem;
+  width:2.7rem;
+  border-radius:50%;
+  @include center();
+  @include use-transition($type:fast);
+  background-color:rgba(yiq-color($--color-header),.2);
+  i{
+    font-size:2rem;
+  }
+  margin-right:.5rem;
+  &:hover{
+    cursor:pointer;
+    background-color:rgba(yiq-color($--color-header),.4);
+  }
+}
+
+.core-page-title{
+  font-size:1.2rem;
+  color:rgba($--color-font-beauty,.5);
+  font-weight: bold;
+  padding-bottom:1rem;
+}
+.core-page-body{
+  min-width: $--card-min-w;
+  max-width:$--card-max-w;
+  margin-left:auto;
+  margin-right:auto;
+}
+.core-img-bulletin-area{
+  height:100%;
+  @include center();
+  img{
+    height:$--header-height - 5px;
+  }
+}
+.core-header-dropdown-content{
+  padding:2rem 1.5rem !important;
+  min-width:160px;
+  i{
+    @include text_color("brand",$line-bg);
+  }
+  ._name{
+    @include text_color("title",$line-bg);
+  }
+  ._position{
+    @include text_color("des",$line-bg);
+  }
+  .ice-avatar{
+    background:$--color-light-border;
+  }
+}
+.core-back-btn{
+  position:absolute;
+  left:0;
+  top:0;
+  transform:translateY(-25%);
+  border:none;
+  outline: none;
+  color:$--color-font-light-main;
+  //padding:.6rem .8rem;
+  @include Iflex-center();
+  background:$--color-light-main-bg;
+  border-radius:50%;
+  overflow:hidden;
+  width:2.8rem;
+  height:2.8rem;
+  i{
+    font-size:1.8rem;
+    transform:rotate(180deg);
+  }
+  margin-left:1rem;
+}
+.core-innerRoute-title{
+  @include Iflex-center();
+  padding-left:.3rem;
+  padding-right:.6rem;
+  i{
+    margin-right:.5rem;
+    font-size:.8rem;
+  }
+  .title{
+    font-size:.8rem;
+    font-weight:400;
+    color:rgba($--color-font-beauty-des,.8);
+  }
+}

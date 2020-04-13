@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="<%= htmlWebpackPlugin.options.base_url %>"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="assets/element.css" />
+    <link rel="stylesheet" href="assets/main.css" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!--    <meta http-equiv="Content-Security-Policy" content="script-src 'self'" />-->
+</head>
+<body>
+<noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+</noscript>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
+</html>

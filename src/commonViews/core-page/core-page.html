@@ -1,0 +1,55 @@
+<cmIce-container
+    :data="navAreaDataDict"
+    :allData="navData"
+    :showAll="isMobile"
+>
+    <nav slot="nav-top" class="core-nav-top">
+        <div class="img-area">
+            <img src="image/logo.png">
+        </div>
+        <div class="content">
+            {{projectName}}
+        </div>
+    </nav>
+
+    <nav class="core-img-bulletin-area" slot="header-bulletin">
+            <img src="image/logo-deep.png" />
+    </nav>
+    <div slot="header-left" class="yo-header-wrapper" v-if="!isMobile">
+        <div
+            v-for="(i,index) in navData" :key="index"
+            class="yo-header-dropdown"
+            :class="{selected:i.selected}"
+        >
+            <label>{{i.label}}</label>
+            <footer></footer>
+        </div>
+    </div>
+    <div slot="header-right">
+        <self-user-header></self-user-header>
+    </div>
+    <div class="core-page-body">
+<!--        抬头 信息-->
+        <header
+            v-if="activePageName"
+            class="core-page-title"
+        >
+            {{activePageName}}
+
+            <span class="core-innerRoute-title" v-for="(i,index) in innerQueue" :key="index">
+                <i class="za za-right"></i>
+                <span class="title">
+                    {{i.subName}}
+                </span>
+            </span>
+            <span class="rel">
+
+            <button class="core-back-btn" v-if="innerQueue.length" @click="innerBack()" v-cm-ripple>
+                <i class="za za-return-1"></i>
+            </button>
+            </span>
+        </header>
+<!--        ice 路由-->
+        <ice-router-view ></ice-router-view>
+    </div>
+</cmIce-container>

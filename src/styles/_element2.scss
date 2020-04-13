@@ -1,0 +1,55 @@
+
+.el-select{
+  width:100%;
+}
+.el-date-editor.el-input{
+  width:100% !important;
+}
+.el-range-editor{
+  width:100% !important;
+  .el-range-input{
+    background:$--color-light-bg;
+  }
+}
+.el-pager{
+  color:$--color-font-beauty-des;
+}
+.btn-prev,
+.btn-next,
+.el-pager li{
+  min-width:32px !important;
+  font-weight:500 !important;
+  border-radius:$--radius-base !important;
+  transition:all .2s ease-out;
+  &:hover{
+    background-color:$--color-light-bg;
+  }
+  &.active{
+    font-weight:bold !important;
+    background-color:$--color-light-border;
+  }
+}
+.el-button--small{
+  border-radius:$--radius-base !important;
+}
+
+.cm-search-card{
+  input::placeholder{
+    font-size:.9rem;
+  }
+}
+.el-table{
+  td{
+    padding:6px;
+    font-size:12px;
+  }
+}
+.el-input__icon{
+  $height:$--yo-input-height - .3rem;
+  line-height:$height !important;
+}
+.el-range-separator{
+  $height:$--yo-input-height - .3rem;
+  line-height:$height !important;
+
+}

@@ -1,0 +1,109 @@
+$--color-main:#1976D2;
+$--color-secretary:$--color-main;
+$--color-assist:#ED7861;
+$--color-header:$--color-main;
+$--color-shadow:black;
+$--color-bg:white;
+$--color-font-light:white;
+$--color-font-dark:black;
+
+$--color-light-bg:rgb(250,250,250);
+$--color-light-main-bg:rgba($--color-main,.1);
+$--color-light-border:rgb(240,240,240);
+$--color-font-beauty: rgba(5, 42, 53,0.85);
+$--color-font-beauty-des:rgba(100,120,150,.7);
+$--color-font-light-main:$--color-main;
+$--color-brand:#5b708b;
+$--color-error:red;
+
+$--use-linear:true;
+$--color-main-linear:linear-gradient(45deg,$--color-main,lighten($--color-main,20%));
+
+$--radius-use:true;
+$--radius-base:1.1rem;
+
+$--yiq-light:$--color-font-light;
+$--yiq-dark:$--color-font-dark;
+
+$--yo-input-height:3rem;
+
+$--header-height:60px;
+
+$--z-index:(
+  header-dropdown-main:200,
+  loader-bg:10
+);
+
+/**
+shadow
+ */
+$--shadow-dropdown:0 0 16px -4px rgba($--color-shadow,0.2) , 0px 12px 24px -16px rgba($--color-shadow,0.3);
+$--shadow-exhibition-card:0 2px 6px -3px rgba($--color-shadow,.3);
+/**
+component
+ */
+$--yo-header-dropdown-item:(
+    minw:30px,
+    font:13px,
+    p:0 8px,
+) !default;
+$--yo-header-dropdown-main:(
+    minw:120px,
+    py:10px
+) !default;
+
+$--yo-header-dropdown-item-media:(
+  small:(
+    minw:30px,
+    font:13px,
+    p:0 8px,
+  ),
+  medium:(
+    minw:40px,
+    font:13px,
+    p:0 10px
+  ),
+  large:(
+    minw:50px,
+    font:14px,
+    p:0 12px
+  ),
+  x:(
+    minw:50px,
+    font:14px,
+    p:0 20px
+  )
+);
+
+$--yo-header-dropdown-main-bg:$--color-bg;
+
+$--yo-header-dropdown-line:(
+  centerH:40px,
+        px:1rem
+);
+
+/**
+row
+ */
+
+$--yo-label-minW:120px;
+$--yo-label-p-right:.8rem;
+$--yo-row-distance:1em;
+$--yo-row-aside-p:2em 2em 1em 2em;
+
+/**
+card
+ */
+$--card-max-w:1400px;
+$--card-min-w:900px;
+
+/**
+pagination package
+ */
+$--yo-pagination-container-p:1.4rem 1rem .8rem 1rem;
+
+
+/**
+loader
+ */
+$--yo-loader-svg-len:150px;

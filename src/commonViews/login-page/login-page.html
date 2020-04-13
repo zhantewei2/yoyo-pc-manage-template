@@ -1,0 +1,38 @@
+<ice-login-page
+        :bg-img="backgroundBg"
+        :login="loginLoading"
+>
+    <!--    header-->
+    <header slot="header" class="ice-brand text-center">
+        {{projectName}}
+    </header>
+    <!--    article-->
+    <article>
+        <div class="ice-login-row">
+            <ice-input v-model="form.value.account" placeholder="账号"
+                       :error="accountError"
+                       :color="accountError?'error':'default'"
+            >
+                <i class="fa fa-user ice-input-icon" slot="prefix"/>
+            </ice-input>
+        </div>
+        <div class="ice-login-row">
+            <ice-input v-model="form.value.password" placeholder="密码"
+                       :error="passwordError"
+                       :color="passwordError?'error':'default'"
+            >
+                <i class="fa fa-changeKey ice-input-icon" slot="prefix"/>
+            </ice-input>
+        </div>
+        <div class="ice-login-row">
+            <ice-button
+                    @click="toLogin"
+                    size="medium" class="ice-btn-block">登录</ice-button>
+        </div>
+
+    </article>
+    <!--    footer-->
+    <footer slot="footer">
+    </footer>
+
+</ice-login-page>

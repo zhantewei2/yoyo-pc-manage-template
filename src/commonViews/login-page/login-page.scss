@@ -1,0 +1,24 @@
+$card-w:450px;
+.login-page-wrapper{
+  top:0;
+  left:0;
+  position:absolute;
+  bottom:0;
+  right:0;
+}
+.login-page{
+  //position:absolute;
+  margin-top:100px;
+  margin-right:auto;
+  margin-left:auto;
+  width:$card-w;
+}
+.login-page-card{
+  width:$card-w;
+}
+.login-page-main{
+  padding:2rem;
+  div:not(:last-of-type){
+    margin-bottom:1.5rem;
+  }
+}

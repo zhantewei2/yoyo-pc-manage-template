@@ -1,0 +1,12 @@
+@mixin LinearBg($various:main){
+  @if $--use-linear{
+    @if $various == main {
+      background-image:$--color-main-linear;
+    }
+  }
+  @else{
+    @if $various == main {
+      background:$--color-main;
+    }
+  }
+}

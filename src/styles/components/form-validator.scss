@@ -1,0 +1,27 @@
+.ice-form-controller {
+  min-height: 3.5rem;
+  display: inline-flex;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+  margin-bottom: .4rem;
+  align-items: baseline;
+
+  .alert {
+
+    position: absolute;
+    left: .4rem;
+    @include use-animation(FadeIn);
+  }
+
+  div:first-of-type {
+    transition: all .3s;
+  }
+
+  &.ice-form-error-block {
+    input {
+      border-color: $--color-error;
+    }
+  }
+
+}

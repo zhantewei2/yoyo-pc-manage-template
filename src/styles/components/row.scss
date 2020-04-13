@@ -1,0 +1,31 @@
+.yo-row{
+  display:flex;
+  &+.yo-row{
+    margin-top:1rem;
+  }
+}
+.yo-cell{
+  display:inline-flex;
+}
+.yo-cell-label{
+  display:inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: $--yo-label-minW;
+  padding-right:$--yo-label-p-right;
+  color:$--color-font-beauty;
+}
+.yo-cell-content{
+  flex:1;
+  flex-shrink: 1;
+}
+.yo-row-aside{
+  padding:$--yo-row-aside-p;
+}
+
+@for $i from 1 through 10 {
+  .flex-#{$i}{
+    flex: $i;
+    flex-shrink: $i;
+  }
+}
