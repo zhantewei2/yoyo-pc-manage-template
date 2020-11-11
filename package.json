@@ -20,7 +20,7 @@
     "compiler-docs": "node introduction/docRoute/index.js introduction/src/views/md introduction/src/router .v.md /docs"
   },
   "dependencies": {
-    "@condyyobeta/fire-ui": "1.3.4",
+    "@condyyobeta/fire-ui": "github:zhantewei2/ztwx-fire-ui#master",
     "@ztwx/auto-template": "^0.0.3",
     "@ztwx/check-package": "^0.0.3",
     "@ztwx/form": "~0.0.1",
