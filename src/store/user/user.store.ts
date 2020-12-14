@@ -43,11 +43,14 @@ const store:Module<UserState,any>={
             {commit,dispatch}:ActionContext<UserState, any>,
             params:LoginParams
         ){
-            loginFromAccount(params).subscribe((result:LoginResult)=>{
+            return loginFromAccount(params)
+              .toPromise()
+              .then((result:LoginResult)=>{
                 //保存用户信息
                 commit("changeUserInfo",result);
                 //发送登录成功状态
-                dispatch("loginSuccess")
+                dispatch("loginSuccess");
+                return true;
             })
         },
         /**

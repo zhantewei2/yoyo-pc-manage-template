@@ -10,12 +10,12 @@ const current_env=process.env.NODE_ENV;
 /**
  * append watch dir
  */
-try {
-    require("@ztwx/check-package")();
-}catch(e){
-    console.warn("Not found @ztwx/check-package .auto installing");
-    require("child_process").spawnSync(process.platform==="win32"?"yarn.cmd":"yarn",["install"],{stdio:"inherit"});
-}
+// try {
+//     require("@ztwx/check-package")();
+// }catch(e){
+    // console.warn("Not found @ztwx/check-package .auto installing");
+    // require("child_process").spawnSync(process.platform==="win32"?"yarn.cmd":"yarn",["install"],{stdio:"inherit"});
+// }
 const {ManageTempalteWatchDir}=require("@ztwx/auto-template");
 
 if(current_env==="dev") new ManageTempalteWatchDir().watch(path.join(host_path,"src"));

@@ -5,7 +5,7 @@ import { NavListItem } from "../ice";
  */
 export const navData: NavListItem[] = [
     {
-        label: "个人信息", children: [
+        label: "系统信息", children: [
 
                     {
                         label: "个人信息管理", children: [

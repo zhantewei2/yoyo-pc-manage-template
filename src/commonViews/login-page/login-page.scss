@@ -6,6 +6,13 @@ $card-w:450px;
   bottom:0;
   right:0;
 }
+.login-header{
+  //background-image:url("/image/1.jpg");
+  //backdrop-filter: blur(10px);
+  //-webkit-background-clip:text;
+  //-webkit-background-clip:text;
+  font-family: 'Microsoft YaHei',Arial,sans-serif;
+}
 .login-page{
   //position:absolute;
   margin-top:100px;
@@ -20,5 +27,24 @@ $card-w:450px;
   padding:2rem;
   div:not(:last-of-type){
     margin-bottom:1.5rem;
+  }
+}
+.ice-login-page-article {
+  max-width:440px;
+  box-shadow:2px 4px 16px -6px rgba(0,0,0,0.4);
+  & > article{
+    padding:1rem;
+  }
+}
+.ice-login-page-article-bg0{
+  background:rgba(255,255,255,.3) !important;
+}
+.ice-login-page-article .ice-login-page-article-bg1{
+  filter:blur(20px);
+  transform: scale(1.03);
+}
+@media screen and (max-width: 860px) {
+  .ice-login-page-article-bg1{
+    display:none;
   }
 }

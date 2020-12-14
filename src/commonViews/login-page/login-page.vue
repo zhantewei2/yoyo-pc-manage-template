@@ -51,27 +51,23 @@
         toLogin(){
             const isPass:boolean=this.form.checkValidators();
             if(!isPass)return;
-            this.pageLogin({...this.form.value});
-        }
-        //
-        pageLogin(loginParameter:any){
             this.loginLoading=true;
-            this.$store.dispatch("user/loginFromAccount",loginParameter)
-        }
-        created(){
-            this.$store.subscribeAction((action,state)=>{
-                if(action.type==="user/loginSuccess"){
-
-                    this.loginLoading=false;
-                    this.$router.push("/home/weclome");
-
-                }else if(action.type==="user/loginFailure"){
-                    this.loginLoading=false;
-
-                }
-            })
+            this.$store.dispatch("user/loginFromAccount",{...this.form.value})
+              .then(()=>{
+                this.loginLoading=false;
+                this.$router.push("/home/weclome");
+              })
+              .catch(()=>{
+                this.$message({
+                  type:"error",
+                  message:"登录失败"
+                })
+              })
+              .finally(()=>{
+                this.loginLoading=false;
+              })
         }
 
     }
 </script>
-<style scoped src="./login-page.scss" lang="scss"></style>
+<style src="./login-page.scss" lang="scss"></style>
