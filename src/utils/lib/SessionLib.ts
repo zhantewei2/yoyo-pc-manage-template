@@ -1,5 +1,5 @@
 import {session} from "@condyyobeta/fire-ui/session";
-import {http} from "@ztwx/http";
+import {http} from "@voyo/http";
 import {NavListItem,dataFactory} from "../../ice";
 
 export interface EntryGuardCall{

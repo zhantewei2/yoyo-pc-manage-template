@@ -1,3 +1,4 @@
+import {ticketKey} from "@config";
 import {session} from "../../utils/Session";
 import {http} from "../../utils/Http";
 import {Module,ActionContext} from "vuex";
@@ -26,8 +27,8 @@ const store:Module<UserState,any>={
         changeUserInfo(state:UserState,userInfo:UserState){
             Object.assign(state,userInfo);
             if(userInfo.ticket){
-                //修改http 请求器的ticket
-                http.setTicketValue(userInfo.ticket);
+                //修改http 全局请求头
+                http.setGlobalHeader(ticketKey,userInfo.ticket);
                 //修改session值
                 session.setSession(userInfo.ticket);
             }

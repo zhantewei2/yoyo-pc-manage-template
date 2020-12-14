@@ -1,22 +1,34 @@
-import {http} from "@ztwx/http";
+import {http} from "@voyo/http";
 import {ticketKey,requestHost} from "@config";
 http.setHost(requestHost);
 http.setTicketKey(ticketKey);
-
-http.setAfterHandler(({status,content},retry:any)=>new Promise<any>((resolve,reject)=>{
-
-    try{
-        if(status!=200)throw "http lose";
-        let {code,message,result}:{code:number,message:string,result:object}=JSON.parse(content);
-        try{
-            message=JSON.parse(message)
-        }catch(e){}
-        if(code!=20000)throw message;
+/**
+ * http全局结果预处理
+ */
+http.setAfterHandler(
+  ({ result, retry }) =>
+    new Promise((resolve, reject) => {
+        const { content, status }: any = result;
         resolve(result);
-    }catch (e) {
-        reject(e&&e.toString());
-    }
-}));
+        // if (
+        //   status !== 200 ||
+        //   (content &&
+        //     content.code &&
+        //     content.code !== 20000 &&
+        //     typeof content.code == "number")
+        // ) {
+        //     if (
+        //       status === 401 &&
+        //       (content.code === 40102 || content.code === 40109)
+        //     ) {
+        //     } else {
+        //         reject(content);
+        //     }
+        // } else {
+        //     resolve(content && content.result ? content.result : content);
+        // }
+    }),
+);
 export {
     http
 }

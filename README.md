@@ -1,8 +1,10 @@
 导航
 ---
+[登录认证流程(必读)](readmes/login.md)
+
 [Inner Router 内嵌路由](readmes/routerSub.md)
 
-[http请求](https://www.npmjs.com/package/@ztwx/http)
+[http请求(必读)](https://github.com/zhantewei2/ztwx-http/blob/master/readme/readme-index.md)
 
 [form表单提交](readmes/form.md)
 
@@ -70,3 +72,29 @@ styles 目录
 - `src/router/index.ts` 主文件
 - `src/router/views.router.ts` 功能页面路由，主文件
 - `src/router/xxx.router.ts` xxx module对应路由文件 
+
+Http处理
+---
+#### `src/utils/Https.ts`
+`http.setAfterHandler`方法处理全局结果
+
+引用配置文件变量
+---
+```javascript
+import {requestHost} from "@config";
+```
+上例子，将分环境引用`requestHost`变量。
+- 开发环境，将使用`src/envs/config.dev.ts`作为源文件;
+- 生产环境，使用`src/envs/config.production.ts`; 
+
+路由菜单
+---
+- 定义左侧边栏菜单
+
+`src/router/index.ts`文件 `getNavData`方法接受`Promise<NavListItem[]>`类型的菜单数据。
+
+- 总路由
+`src/router/index.ts` 定义系统总路由
+
+- 功能页路由
+`src/router/views.router.ts` 定义所有功能页路由

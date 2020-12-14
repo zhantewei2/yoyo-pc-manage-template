@@ -24,7 +24,7 @@
     "@ztwx/auto-template": "^0.0.3",
     "@ztwx/check-package": "^0.0.3",
     "@ztwx/form": "~0.0.1",
-    "@ztwx/http": "~0.0.1",
+    "@voyo/http": "^2.4.0",
     "core-js": "^3.6.4",
     "cross-env": "^7.0.2",
     "element-ui": "^2.13.0",

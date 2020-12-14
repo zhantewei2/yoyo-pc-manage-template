@@ -1,4 +1,4 @@
-import {http} from "@ztwx/http";
+import {http} from "@voyo/http";
 import {Observable,of,throwError} from "rxjs";
 import {mergeMap} from "rxjs/operators";
 

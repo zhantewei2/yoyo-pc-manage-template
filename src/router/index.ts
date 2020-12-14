@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import CorePage from "../commonViews/core-page/core-page.vue";
 import ViewsRoutes from "./views.router"
 import {sessionGuardNavListCombine} from "../utils/Session";
-import {http} from "@ztwx/http";
+import {http} from "@voyo/http";
 import {navData} from "./navData";
 import store from "../store";
 
@@ -34,7 +34,6 @@ const router = new VueRouter({
                  */
                 console.debug("login from sessionVal");
                 return new Promise((resolve,reject)=>{
-
                     store.dispatch("user/loginFromTicket",{
                         ticket:sessionVal,
                         callback:(ticket:string)=>ticket?resolve(ticket):reject()

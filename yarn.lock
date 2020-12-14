@@ -1481,9 +1481,9 @@
     tslib "^1.11.1"
     typescript "^3.8.3"
 
-"@ztwx/http@~0.0.1":
+"@voyo/http@~0.0.1":
   version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@ztwx/http/-/http-0.0.1.tgz#172ce9c0d68191c4d1291937dec21a885f05148a"
+  resolved "https://registry.yarnpkg.com/@voyo/http/-/http-0.0.1.tgz#172ce9c0d68191c4d1291937dec21a885f05148a"
   integrity sha512-CukVWlhG20PyutbTvtNAH8HWn3jku/hHrtGOkwnm7KgbrUN4MkwUT9FGQtmZrbNYMzNEyJgvIQ91vwKMWIozzw==
   dependencies:
     cache-ajax "^3.0.1"
